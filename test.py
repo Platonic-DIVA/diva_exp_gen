@@ -3,7 +3,7 @@ with open("mmdcommands.csv") as mmd_expressions:
         for line in mmd_expressions:
             current_expression = line.split(",")
             Name = current_expression[0]
-            Time = int(current_expression[1]) * 60
+            Time = int(current_expression[1]) * 600
             Value = float(current_expression[2]) * 100
             
             
