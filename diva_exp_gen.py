@@ -1,6 +1,8 @@
 with open("mmdcommands.csv") as mmd_expressions:
     for line in mmd_expressions:
             current_expression = line.split(",")
+            if len(current_expression) <= 2:
+                print('non expression line, ignoring (i think)')
             Name = current_expression[0]
             Time = float(current_expression[1]) / 60 * 100000
             Value = float(current_expression[2]) * 100
